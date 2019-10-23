@@ -9,4 +9,7 @@ let s = Conversion*l
 let f = (c+c+s+s)
 let g = Math.round(100*f)/(100)
 let h = g.toLocaleString()
+function financial(h) {
+  return Number.parseFloat(h).toFixed(2);
+}
 console.log("\nA(n) " + Width + "-by-" + Length + "-inch sheet of paper has a perimeter of " + h + " square centimeter(s).");
