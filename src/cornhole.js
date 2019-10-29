@@ -1,11 +1,11 @@
 const readlineSync = require("readline-sync");
 
-const Length = 48
-const Width = 24
-const Diameter = 6
+const length = 48
+const width = 24
+const diameter = 6
 
-let area = Math.pow((Diameter/2), 2) * Math.PI
-let box_area = ((Length*Width) - area)
+let area = Math.pow((diameter/2), 2) * Math.PI
+let box_area = ((length*width) - area)
 
 let cornhole = Math.round(100*box_area) / (100)
 

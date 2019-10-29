@@ -1,28 +1,24 @@
 const readlineSync = require("readline-sync");
 
-const HourlyWage = parseFloat(readlineSync.question("\nHourly Wage: "), 10);
+const hourlyWage = parseFloat(readlineSync.question("\nHourly Wage: "), 10);
 
-let Monday = parseFloat(readlineSync.question("\nMonday: "), 10);
+let monday = parseFloat(readlineSync.question("\nMonday: "), 10);
 
-let Tuesday = parseFloat(readlineSync.question("Tuesday: "), 10);
+let tuesday = parseFloat(readlineSync.question("Tuesday: "), 10);
 
-let Wednesday = parseFloat(readlineSync.question("Wednesday: "), 10);
+let wednesday = parseFloat(readlineSync.question("Wednesday: "), 10);
 
-let Thursday = parseFloat(readlineSync.question("Thursday: "), 10);
+let thursday = parseFloat(readlineSync.question("Thursday: "), 10);
 
-let Friday = parseFloat(readlineSync.question("Friday: "), 10);
+let friday = parseFloat(readlineSync.question("Friday: "), 10);
 
-let Saturday = parseFloat(readlineSync.question("Saturday: "), 10);
+let saturday = parseFloat(readlineSync.question("Saturday: "), 10);
 
-let Sunday = parseFloat(readlineSync.question("Sunday: "), 10);
+let sunday = parseFloat(readlineSync.question("Sunday: "), 10);
 
-let a = (Monday+Tuesday+Wednesday+Thursday+Friday+Saturday+Sunday)*HourlyWage
+let a = (monday+tuesday+wednesday+thursday+friday+saturday+sunday)*hourlyWage
 
 let b = Math.round(100*a) / (100)
+let c = b.toLocaleString( "en", {minimumFractionDigits:2, maximumFractionDigits:2} )
 
-let c = b.toLocaleString()
-function financial(c) {
-  return Number.parseFloat(c).toFixed(2);
-}
-
-console.log("\nYou'll make " + "$" + financial(c) + " this week.");
+console.log("\nYou'll make " + "$" + c + " this week.");

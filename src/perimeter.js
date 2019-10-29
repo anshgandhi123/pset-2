@@ -1,15 +1,12 @@
 const readlineSync = require("readline-sync")
-const Width = readlineSync.question("\nWidth: ")
-const Length = readlineSync.question("Length: ")
-const Conversion = 2.54;
-let w = Width;
-let l = Length;
-let c = w*Conversion
-let s = Conversion*l
+const width = readlineSync.question("\nWidth: ")
+const length = readlineSync.question("Length: ")
+const conversion = 2.54;
+let w = width;
+let l = length;
+let c = w*conversion
+let s = conversion*l
 let f = (c+c+s+s)
 let g = Math.round(100*f)/(100)
-let h = g.toLocaleString()
-function financial(h) {
-  return Number.parseFloat(h).toFixed(2);
-}
-console.log("\nA(n) " + Width + "-by-" + Length + "-inch sheet of paper has a perimeter of " + h + " centimeter(s).");
+let h = g.toLocaleString( "en", {minimumFractionDigits:2, maximumFractionDigits:2} )
+console.log("\nA(n) " + width + "-by-" + length + "-inch sheet of paper has a perimeter of " + h + " centimeter(s).");
