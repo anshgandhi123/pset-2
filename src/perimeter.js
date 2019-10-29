@@ -12,4 +12,4 @@ let h = g.toLocaleString()
 function financial(h) {
   return Number.parseFloat(h).toFixed(2);
 }
-console.log("\nA(n) " + Width + "-by-" + Length + "-inch sheet of paper has a perimeter of " + h + " square centimeter(s).");
+console.log("\nA(n) " + Width + "-by-" + Length + "-inch sheet of paper has a perimeter of " + h + " centimeter(s).");
